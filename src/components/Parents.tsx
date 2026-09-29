@@ -64,7 +64,7 @@ export default function Parents() {
         <div className="w-full flex flex-col items-center">
           <motion.p
             variants={itemVariants}
-            className="font-serif italic text-amber-900/60 text-[10px] sm:text-xs tracking-wider uppercase mb-0.5"
+            className="font-serif italic text-amber-900 text-[10px] sm:text-xs tracking-wider uppercase mb-0.5"
           >
             Beloved Daughter of
           </motion.p>
@@ -78,7 +78,7 @@ export default function Parents() {
 
           <motion.p
             variants={itemVariants}
-            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-bold max-w-[280px] sm:max-w-none"
+            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-600 tracking-wide mt-0.5 font-bold max-w-[280px] sm:max-w-none"
           >
             (LIC of India, Sr. Insurance Advisor)
           </motion.p>
@@ -100,7 +100,7 @@ export default function Parents() {
         <div className="w-full flex flex-col items-center">
           <motion.p
             variants={itemVariants}
-            className="font-serif italic text-amber-900/60 text-[10px] sm:text-xs tracking-wider uppercase mb-0.5"
+            className="font-serif italic text-amber-900 text-[10px] sm:text-xs tracking-wider uppercase mb-0.5"
           >
             Cherished Son of
           </motion.p>
@@ -114,7 +114,7 @@ export default function Parents() {
 
           <motion.p
             variants={itemVariants}
-            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-bold max-w-[280px] sm:max-w-none"
+            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-600 tracking-wide mt-0.5 font-bold max-w-[280px] sm:max-w-none"
           >
             (Sri Meenakshi Bikes, Bajaj Service Manager)
           </motion.p>
@@ -124,10 +124,10 @@ export default function Parents() {
         <div className="w-full flex flex-col items-center px-4 my-1">
           <motion.p
             variants={itemVariants}
-            className="font-cormorant text-neutral-900 text-xs sm:text-[13px] font-bold leading-relaxed max-w-xs"
+            className="font-cormorant italic text-cadillac-700 text-xs sm:text-[13px] font-bold leading-relaxed max-w-xs"
           >
             Cordially invite you to grace the auspicious occasion of the
-            marriage reception of their children
+            marriage reception of our children
           </motion.p>
         </div>
 

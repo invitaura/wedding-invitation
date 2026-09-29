@@ -4,8 +4,23 @@
 @import "tailwindcss";
 
 @theme {
-  --font-bonheur: 'Bonheur Royale', cursive;
-  --font-tangerine: 'Tangerine', cursive;
-  --font-italianno: 'Italianno', cursive;
-  --font-cormorant: 'Cormorant Garamond', serif;
+    --font-bonheur: 'Bonheur Royale', cursive;
+    --font-tangerine: 'Tangerine', cursive;
+    --font-italianno: 'Italianno', cursive;
+    --font-cormorant: 'Cormorant Garamond', serif;
+
+    --color-cadillac-50: #faf5f7;
+    --color-cadillac-100: #f6edf0;
+    --color-cadillac-200: #efdbe2;
+    --color-cadillac-300: #e4bdc9; 
+    --color-cadillac-400: #d294a6;
+    --color-cadillac-500: #c17387;
+    --color-cadillac-600: #ac5769;
+    --color-cadillac-700: #924452;
+    --color-cadillac-800: #7a3a45;
+    --color-cadillac-900: #67343d;
+    --color-cadillac-950: #3d1a20;
+
+    --color-coat-100: #5f4234;
+    --color-coat-200: #962e23;
 }
