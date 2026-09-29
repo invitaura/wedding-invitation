@@ -54,7 +54,7 @@ export default function Venue() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  const mapDirectionsUrl = "https://goo.gl";
+  const mapDirectionsUrl = "https://maps.app.goo.gl/8XJZsNrQxhFqUP2i7";
 
   return (
     <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 pt-12 pb-4 select-none overflow-hidden bg-gradient-to-b from-white via-amber-50/20 to-amber-50/40 snap-start">
