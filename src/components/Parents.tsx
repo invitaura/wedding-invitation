@@ -50,12 +50,12 @@ export default function Parents() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}
-        className="w-full max-w-md z-10 text-center flex flex-col items-center justify-center px-2 gap-y-5 sm:gap-y-6"
+        className="w-full max-w-md z-10 text-center flex flex-col items-center justify-center px-2 gap-y-4 sm:gap-y-5"
       >
         {/* Top Quote */}
         <motion.p
           variants={itemVariants}
-          className="font-serif italic text-amber-800 text-xs sm:text-[13px] tracking-wide max-w-xs sm:max-w-sm leading-relaxed mb-1"
+          className="font-serif italic text-amber-800 text-xs sm:text-[13px] tracking-wide max-w-xs sm:max-w-sm leading-relaxed"
         >
           "With the love of our families as our anchor and the blessings of the heavens as our light, our journey begins."
         </motion.p>
@@ -120,12 +120,22 @@ export default function Parents() {
           </motion.p>
         </div>
 
-        {/* 👩‍❤️‍👨 Couple Illustration & Names Section (Now seamlessly grouped) */}
-        <div className="w-full flex flex-col items-center mt-2 gap-y-3">
+        {/* ✉️ NEW INVITATION MESSAGE */}
+        <div className="w-full flex flex-col items-center px-4 my-1">
+          <motion.p
+            variants={itemVariants}
+            className="font-serif text-neutral-600 text-xs sm:text-[13px] leading-relaxed max-w-xs"
+          >
+            Cordially invite you to grace the auspicious occasion of the marriage reception of their children
+          </motion.p>
+        </div>
+
+        {/* 👩‍❤️‍👨 Couple Illustration & Names Section */}
+        <div className="w-full flex flex-col items-center gap-y-2">
           {/* Couple Illustration */}
           <motion.div
             variants={itemVariants}
-            className="w-full max-w-[100px] sm:max-w-[120px] aspect-[3/4] flex items-center justify-center"
+            className="w-full max-w-[90px] sm:max-w-[110px] aspect-[3/4] flex items-center justify-center"
           >
             <img
               src={CoupleImg}
