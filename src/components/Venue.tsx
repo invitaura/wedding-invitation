@@ -26,14 +26,15 @@ export default function Venue() {
 
       setTimeLeft({
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((difference % (1000 * 60)) / 1000),
         isExpired: false,
       });
     };
 
-    // Run calculation once immediately on mount, then initialize interval engine
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
 
@@ -53,11 +54,10 @@ export default function Venue() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  const mapDirectionsUrl = "https://maps.app.goo.gl/5DYbBRDwfXBge6A7A";
+  const mapDirectionsUrl = "https://goo.gl";
 
   return (
     <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 py-12 select-none overflow-hidden bg-gradient-to-b from-white via-amber-50/20 to-amber-50/40 snap-start">
-      
       {/* 📜 Structured Container Box */}
       <motion.div
         variants={containerVariants}
@@ -83,7 +83,7 @@ export default function Venue() {
           <div className="w-12 border-b-2 border-amber-600/30 mt-1" />
         </div>
 
-        {/* ⏳ NEW ELEMENT: STUNNING REAL-TIME COUNTDOWN TIMER */}
+        {/* ⏳ COUNTDOWN TIMER */}
         {!timeLeft.isExpired && (
           <motion.div
             variants={itemVariants}
@@ -92,23 +92,23 @@ export default function Venue() {
             <p className="font-serif italic text-amber-800/70 text-[11px] sm:text-xs tracking-widest uppercase font-medium">
               Counting Down To The Big Day
             </p>
-            
-            {/* Horizontal Grid Block Matrix */}
+
             <div className="flex items-center justify-center gap-3 sm:gap-4 w-full px-2">
               {[
                 { label: "Days", value: timeLeft.days },
                 { label: "Hours", value: timeLeft.hours },
                 { label: "Mins", value: timeLeft.minutes },
-                { label: "Secs", value: timeLeft.seconds }
+                { label: "Secs", value: timeLeft.seconds },
               ].map((timeUnit, index) => (
-                <div key={index} className="flex flex-col items-center min-w-[64px] sm:min-w-[72px]">
-                  {/* Glowing Numeric Metric Box */}
+                <div
+                  key={index}
+                  className="flex flex-col items-center min-w-[64px] sm:min-w-[72px]"
+                >
                   <div className="w-full bg-amber-900/5 backdrop-blur-xs border border-amber-800/10 rounded-xl py-2 px-1 text-center shadow-inner">
                     <span className="font-sans font-bold text-lg sm:text-xl md:text-2xl text-amber-900 tabular-nums">
                       {String(timeUnit.value).padStart(2, "0")}
                     </span>
                   </div>
-                  {/* Subtle Footer Label */}
                   <span className="font-serif italic text-[10px] sm:text-[11px] text-neutral-400 mt-1">
                     {timeUnit.label}
                   </span>
@@ -123,9 +123,7 @@ export default function Venue() {
           variants={itemVariants}
           className="w-full bg-white/70 backdrop-blur-sm border border-amber-800/10 rounded-2xl p-4 sm:p-5 shadow-sm flex flex-col gap-4"
         >
-          {/* Main Detail Core Row */}
           <div className="w-full flex items-center justify-between">
-            {/* Left Column: Date Callout */}
             <div className="flex flex-col items-end w-[45%] text-right pr-4 border-r border-amber-800/15">
               <p className="font-serif text-sm sm:text-base text-neutral-800 font-bold leading-tight">
                 Wednesday
@@ -135,7 +133,6 @@ export default function Venue() {
               </p>
             </div>
 
-            {/* Right Column: Timing Callout */}
             <div className="flex flex-col items-start w-[50%] text-left pl-4">
               <p className="font-serif text-xs sm:text-sm text-neutral-700 font-bold tracking-wide">
                 6:00 PM Onwards
@@ -148,7 +145,6 @@ export default function Venue() {
 
           <div className="w-full border-t border-dashed border-amber-800/10" />
 
-          {/* Hall Identity Details */}
           <div className="flex flex-col items-center">
             <p className="font-serif italic text-[10px] sm:text-xs text-amber-900/60 uppercase tracking-widest mb-1">
               Celebration Hall
@@ -173,7 +169,7 @@ export default function Venue() {
           whileTap={{ scale: 0.98 }}
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://w3.org"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.8}
@@ -193,6 +189,32 @@ export default function Venue() {
           </svg>
           Locate on Google Maps
         </motion.a>
+
+        {/* 💝 NEW ELEMENT: THE FINAL SIGN-OFF MESSAGE */}
+        <div className="w-full flex flex-col items-center mt-2 pt-2">
+          <motion.div
+            variants={itemVariants}
+            className="w-12 border-b border-amber-800/15 mb-4"
+          />
+          <motion.p
+            variants={itemVariants}
+            className="font-serif italic text-amber-900/70 text-xs sm:text-[13px] tracking-wide max-w-xs leading-relaxed"
+          >
+            “Your presence and blessings are the most precious gifts we could
+            receive on our special day.”
+          </motion.p>
+          <motion.div
+            variants={itemVariants}
+            className="mt-4 flex flex-col items-center gap-0.5"
+          >
+            <p className="font-serif italic text-[10px] sm:text-xs tracking-widest text-neutral-400 uppercase">
+              With Best Compliments From
+            </p>
+            <p className="font-serif text-sm text-amber-950 font-bold tracking-wide">
+              Near & Dear, Friends & Family
+            </p>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );
