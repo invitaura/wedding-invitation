@@ -1,7 +1,45 @@
+import { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
 
 export default function Venue() {
-  // Animation Variants matching your parent page configuration
+  // Target Event Time: October 28, 2026, at 6:00 PM (18:00)
+  const TARGET_DATE = new Date("2026-10-28T18:00:00").getTime();
+
+  // State management tracking countdown parameters
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    isExpired: false,
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date().getTime();
+      const difference = TARGET_DATE - now;
+
+      if (difference <= 0) {
+        setTimeLeft((prev) => ({ ...prev, isExpired: true }));
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
+        isExpired: false,
+      });
+    };
+
+    // Run calculation once immediately on mount, then initialize interval engine
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, [TARGET_DATE]);
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -15,11 +53,11 @@ export default function Venue() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
   };
 
-  // Google Maps Coordinates / Search Query Link
   const mapDirectionsUrl = "https://maps.app.goo.gl/5DYbBRDwfXBge6A7A";
 
   return (
     <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 py-12 select-none overflow-hidden bg-gradient-to-b from-white via-amber-50/20 to-amber-50/40 snap-start">
+      
       {/* 📜 Structured Container Box */}
       <motion.div
         variants={containerVariants}
@@ -44,6 +82,41 @@ export default function Venue() {
           </motion.h3>
           <div className="w-12 border-b-2 border-amber-600/30 mt-1" />
         </div>
+
+        {/* ⏳ NEW ELEMENT: STUNNING REAL-TIME COUNTDOWN TIMER */}
+        {!timeLeft.isExpired && (
+          <motion.div
+            variants={itemVariants}
+            className="w-full flex flex-col items-center gap-2"
+          >
+            <p className="font-serif italic text-amber-800/70 text-[11px] sm:text-xs tracking-widest uppercase font-medium">
+              Counting Down To The Big Day
+            </p>
+            
+            {/* Horizontal Grid Block Matrix */}
+            <div className="flex items-center justify-center gap-3 sm:gap-4 w-full px-2">
+              {[
+                { label: "Days", value: timeLeft.days },
+                { label: "Hours", value: timeLeft.hours },
+                { label: "Mins", value: timeLeft.minutes },
+                { label: "Secs", value: timeLeft.seconds }
+              ].map((timeUnit, index) => (
+                <div key={index} className="flex flex-col items-center min-w-[64px] sm:min-w-[72px]">
+                  {/* Glowing Numeric Metric Box */}
+                  <div className="w-full bg-amber-900/5 backdrop-blur-xs border border-amber-800/10 rounded-xl py-2 px-1 text-center shadow-inner">
+                    <span className="font-sans font-bold text-lg sm:text-xl md:text-2xl text-amber-900 tabular-nums">
+                      {String(timeUnit.value).padStart(2, "0")}
+                    </span>
+                  </div>
+                  {/* Subtle Footer Label */}
+                  <span className="font-serif italic text-[10px] sm:text-[11px] text-neutral-400 mt-1">
+                    {timeUnit.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* 📅 DATE & TIME CARD MATRIX */}
         <motion.div
@@ -99,7 +172,6 @@ export default function Venue() {
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.98 }}
         >
-          {/* Compass Icon SVG with fixed attributes */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
