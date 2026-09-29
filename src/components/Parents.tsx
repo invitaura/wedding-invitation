@@ -2,6 +2,8 @@ import { motion, type Variants } from "framer-motion";
 import TempleImg from "../assets/Temple.png";
 import ThoranamImg from "../assets/Thoranum.png";
 import CoupleImg from "../assets/Couple.png";
+import VinayagarImg from "../assets/Vinayakar.png";
+import DiyaImg from "../assets/Diya.png";
 
 export default function Parents() {
   const containerVariants: Variants = {
@@ -52,21 +54,21 @@ export default function Parents() {
         className="absolute left-[0px] sm:left-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
       >
         <img
-          src="src/assets/Diya.png"
+          src={DiyaImg}
           alt="Decorative Left Lamp"
           className="w-full h-[45px] object-contain"
         />
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, y: 0 }}
         whileInView={{ opacity: 0.85, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         className="absolute sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
       >
         <img
-          src="src/assets/Diya.png"
+          src={VinayagarImg}
           alt="Decorative Right Lamp"
           className="w-full h-[45px] object-contain"
         />
@@ -80,7 +82,7 @@ export default function Parents() {
         className="absolute right-[0px] sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10 transform scale-x-[-1]"
       >
         <img
-          src="src/assets/Diya.png"
+          src={DiyaImg}
           alt="Decorative Right Lamp"
           className="w-full h-[45px] object-contain"
         />
