@@ -1,7 +1,4 @@
 import { motion, type Variants } from "framer-motion";
-import TempleImg from "../../public/assets/Temple.webp";
-import ThoranamImg from "../../public/assets/Thoranum.webp";
-import CoupleImg from "../../public/assets/Couple.webp";
 
 export default function Parents() {
   const containerVariants: Variants = {
@@ -22,7 +19,7 @@ export default function Parents() {
       {/* 🏛️ Center Temple Gopuram Background Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
         <img
-          src={TempleImg}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/xMJHQfw9BM3i8ynM5Dwy/image.webp"}
           alt="Temple Gopuram"
           className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain opacity-[0.20] transform scale-110"
         />
@@ -36,7 +33,7 @@ export default function Parents() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute top-0 left-0 right-0 w-full h-12 sm:h-16 pointer-events-none z-10"
         style={{
-          backgroundImage: `url(${ThoranamImg})`,
+          backgroundImage: `url(https://plain-apac-prod-public.komododecks.com/202609/29/pcM2XSV8VDzv07XhZia1/image.webp)`,
           backgroundRepeat: "repeat-x",
           backgroundSize: "auto 100%",
           backgroundPosition: "top center",
@@ -52,7 +49,7 @@ export default function Parents() {
         className="absolute left-[0px] sm:left-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
       >
         <img
-          src={"../../public/assets/Diya.webp"}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/a1KbRs1gIjz3010rnN23/image.webp"}
           alt="Decorative Left Lamp"
           className="w-full h-[45px] object-contain"
         />
@@ -66,7 +63,7 @@ export default function Parents() {
         className="absolute sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
       >
         <img
-          src={"../../public/assets/Vinayakar.webp"}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/7gUw4j2mr3CgYEHETkR3/image.webp"}
           alt="Decorative Right Lamp"
           className="w-full h-[45px] object-contain"
         />
@@ -80,7 +77,7 @@ export default function Parents() {
         className="absolute right-[0px] sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10 transform scale-x-[-1]"
       >
         <img
-          src={"../../public/assets/Diya.webp"}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/a1KbRs1gIjz3010rnN23/image.webp"}
           alt="Decorative Right Lamp"
           className="w-full h-[45px] object-contain"
         />
@@ -182,7 +179,7 @@ export default function Parents() {
             className="w-full max-w-[90px] sm:max-w-[110px] aspect-[3/4] flex items-center justify-center"
           >
             <img
-              src={CoupleImg}
+              src={"https://plain-apac-prod-public.komododecks.com/202609/29/f4XqUSZxO0p9LWKnLLYS/image.webp"}
               alt="Wedding Couple Cartoon"
               className="w-full h-auto object-contain drop-shadow-sm"
             />
