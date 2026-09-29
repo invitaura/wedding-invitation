@@ -43,6 +43,49 @@ export default function Parents() {
         }}
       />
 
+      {/* 🪔 SIDE CREATIVE ELEMENTS: Left and Right Decorative Lamps */}
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 0.85, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        className="absolute left-[0px] sm:left-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
+      >
+        <img
+          src="src/assets/Diya.png"
+          alt="Decorative Left Lamp"
+          className="w-full h-[45px] object-contain"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 0.85, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        className="absolute sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
+      >
+        <img
+          src="src/assets/Diya.png"
+          alt="Decorative Right Lamp"
+          className="w-full h-[45px] object-contain"
+        />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 0.85, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        className="absolute right-[0px] sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10 transform scale-x-[-1]"
+      >
+        <img
+          src="src/assets/Diya.png"
+          alt="Decorative Right Lamp"
+          className="w-full h-[45px] object-contain"
+        />
+      </motion.div>
+
       {/* 📜 CENTER ELEMENT: Tight, Balanced Content Typography Stack */}
       <motion.div
         variants={containerVariants}
