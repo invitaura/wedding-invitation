@@ -57,14 +57,14 @@ export default function Venue() {
   const mapDirectionsUrl = "https://goo.gl";
 
   return (
-    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 py-12 select-none overflow-hidden bg-gradient-to-b from-white via-amber-50/20 to-amber-50/40 snap-start">
+    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 pt-12 pb-4 select-none overflow-hidden bg-gradient-to-b from-white via-amber-50/20 to-amber-50/40 snap-start">
       {/* 📜 Structured Container Box */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-40px" }}
-        className="w-full max-w-md z-10 text-center flex flex-col items-center justify-center px-2 gap-y-6"
+        className="w-full max-w-md z-10 text-center flex flex-col items-center justify-center px-2 gap-y-6 h-full"
       >
         {/* Component Title Header */}
         <div className="flex flex-col items-center gap-1">
@@ -169,7 +169,7 @@ export default function Venue() {
           whileTap={{ scale: 0.98 }}
         >
           <svg
-            xmlns="http://w3.org"
+            xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.8}
@@ -190,12 +190,8 @@ export default function Venue() {
           Locate on Google Maps
         </motion.a>
 
-        {/* 💝 NEW ELEMENT: THE FINAL SIGN-OFF MESSAGE */}
-        <div className="w-full flex flex-col items-center mt-2 pt-2">
-          <motion.div
-            variants={itemVariants}
-            className="w-12 border-b border-amber-800/15 mb-4"
-          />
+        {/* 💝 THE FINAL SIGN-OFF MESSAGE */}
+        <div className="w-full flex flex-col items-center mt-2">
           <motion.p
             variants={itemVariants}
             className="font-serif italic text-amber-900/70 text-xs sm:text-[13px] tracking-wide max-w-xs leading-relaxed"
@@ -215,6 +211,42 @@ export default function Venue() {
             </p>
           </motion.div>
         </div>
+
+        {/* 🏷️ BRAND FOOTER CREDITS */}
+        <motion.footer
+          variants={itemVariants}
+          className="w-full flex flex-col items-center gap-1.5 mt-8 pt-4 border-t border-amber-800/10 text-[10px] sm:text-[11px] text-neutral-400 font-sans tracking-wide"
+        >
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            {/* Instagram Link */}
+            <a
+              href="https://instagram.com/_invitaura_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-800 transition-colors duration-200 flex items-center gap-1 cursor-pointer"
+            >
+              <span className="font-medium text-neutral-500">IG:</span>{" "}
+              @_invitaura_
+            </a>
+            <span className="text-neutral-300 select-none">•</span>
+            {/* Phone Link */}
+            <a
+              href="tel:+918667259395"
+              className="hover:text-amber-800 transition-colors duration-200 flex items-center gap-1 cursor-pointer"
+            >
+              <span className="font-medium text-neutral-500">Ph:</span> +91
+              86672 59395
+            </a>
+          </div>
+
+          {/* Copyright notice */}
+          <p className="text-[9px] sm:text-[10px] text-neutral-400/80 font-light mt-0.5 select-text">
+            © {new Date().getFullYear()} Designed & Developed by{" "}
+            <span className="font-medium text-amber-900/70 tracking-normal">
+              invitaura
+            </span>
+          </p>
+        </motion.footer>
       </motion.div>
     </section>
   );
