@@ -10,7 +10,7 @@ function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // 🎵 Extract your raw .mp3 audio stream link hosted in your asset pipeline or streaming provider dashboard
-  const audioUrl = "src/assets/music.mp3"; 
+  const audioUrl = "assets/music.mp3"; 
 
   // Initialize the native browser audio node object on assembly mounting
   useEffect(() => {

@@ -2,7 +2,6 @@ import { motion, type Variants } from "framer-motion";
 import TempleImg from "../assets/Temple.png";
 import ThoranamImg from "../assets/Thoranum.png";
 import CoupleImg from "../assets/Couple.png";
-import VinayagarImg from "../assets/Vinayakar.png";
 import DiyaImg from "../assets/Diya.png";
 
 export default function Parents() {
