@@ -2,7 +2,6 @@ import { motion, type Variants } from "framer-motion";
 import TempleImg from "../assets/Temple.png";
 import ThoranamImg from "../assets/Thoranum.png";
 import CoupleImg from "../assets/Couple.png";
-import DiyaImg from "../assets/Diya.png";
 
 export default function Parents() {
   const containerVariants: Variants = {
@@ -53,7 +52,7 @@ export default function Parents() {
         className="absolute left-[0px] sm:left-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
       >
         <img
-          src={DiyaImg}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/c7Rk2DFFbUMombQblDbJ/image.png"}
           alt="Decorative Left Lamp"
           className="w-full h-[45px] object-contain"
         />
@@ -81,7 +80,7 @@ export default function Parents() {
         className="absolute right-[0px] sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10 transform scale-x-[-1]"
       >
         <img
-          src={DiyaImg}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/c7Rk2DFFbUMombQblDbJ/image.png"}
           alt="Decorative Right Lamp"
           className="w-full h-[45px] object-contain"
         />
