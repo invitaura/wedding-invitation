@@ -68,7 +68,7 @@ export default function Parents() {
         className="absolute sm:right-4 top-[10dvh] w-24 sm:w-36 h-auto pointer-events-none z-10"
       >
         <img
-          src={VinayagarImg}
+          src={"https://plain-apac-prod-public.komododecks.com/202609/29/smnG6UEmvcERkcOtLZzb/image.png"}
           alt="Decorative Right Lamp"
           className="w-full h-[45px] object-contain"
         />
