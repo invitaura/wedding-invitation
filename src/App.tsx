@@ -10,11 +10,12 @@ function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // 🎵 Extract your raw .mp3 audio stream link hosted in your asset pipeline or streaming provider dashboard
-  const audioUrl = "assets/music.mp3"; 
+  const audioUrl = "/assets/music.mp3"; 
 
   // Initialize the native browser audio node object on assembly mounting
   useEffect(() => {
     audioRef.current = new Audio(audioUrl);
+    audioRef.current.preload = 'auto';
     audioRef.current.loop = true; // Loops seamlessly for continuous background audio
     audioRef.current.volume = 0.4; // Initial target comfort volume level (40%)
 
