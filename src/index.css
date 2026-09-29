@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Italianno&family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Italianno&family=Tangerine:wght@700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-bonheur: 'Bonheur Royale', cursive;
+  --font-tangerine: 'Tangerine', cursive;
+  --font-italianno: 'Italianno', cursive;
+  --font-cormorant: 'Cormorant Garamond', serif;
+}

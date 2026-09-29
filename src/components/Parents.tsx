@@ -4,7 +4,6 @@ import ThoranamImg from "../assets/Thoranum.png";
 import CoupleImg from "../assets/Couple.png";
 
 export default function Parents() {
-
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -25,7 +24,7 @@ export default function Parents() {
         <img
           src={TempleImg}
           alt="Temple Gopuram"
-          className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain opacity-[0.05] transform scale-110"
+          className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain opacity-[0.20] transform scale-110"
         />
       </div>
 
@@ -55,9 +54,10 @@ export default function Parents() {
         {/* Top Quote */}
         <motion.p
           variants={itemVariants}
-          className="font-serif italic text-amber-800 text-xs sm:text-[13px] tracking-wide max-w-xs sm:max-w-sm leading-relaxed"
+          className="font-tangerine text-amber-800 text-[1.2rem] font-bold tracking-wide max-w-xs sm:max-w-sm leading-relaxed"
         >
-          "With the love of our families as our anchor and the blessings of the heavens as our light, our journey begins."
+          "With the love of our families as our anchor and the blessings of the
+          heavens as our light, our journey begins."
         </motion.p>
 
         {/* Bride's Side */}
@@ -78,7 +78,7 @@ export default function Parents() {
 
           <motion.p
             variants={itemVariants}
-            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-light max-w-[280px] sm:max-w-none"
+            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-bold max-w-[280px] sm:max-w-none"
           >
             (LIC of India, Sr. Insurance Advisor)
           </motion.p>
@@ -114,7 +114,7 @@ export default function Parents() {
 
           <motion.p
             variants={itemVariants}
-            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-light max-w-[280px] sm:max-w-none"
+            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-bold max-w-[280px] sm:max-w-none"
           >
             (Sri Meenakshi Bikes, Bajaj Service Manager)
           </motion.p>
@@ -124,9 +124,10 @@ export default function Parents() {
         <div className="w-full flex flex-col items-center px-4 my-1">
           <motion.p
             variants={itemVariants}
-            className="font-serif text-neutral-600 text-xs sm:text-[13px] leading-relaxed max-w-xs"
+            className="font-cormorant text-neutral-900 text-xs sm:text-[13px] font-bold leading-relaxed max-w-xs"
           >
-            Cordially invite you to grace the auspicious occasion of the marriage reception of their children
+            Cordially invite you to grace the auspicious occasion of the
+            marriage reception of their children
           </motion.p>
         </div>
 
@@ -147,12 +148,15 @@ export default function Parents() {
           {/* Responsive Couple Names Display */}
           <motion.h3
             variants={itemVariants}
-            className="font-serif text-xl sm:text-2xl md:text-3xl text-amber-900 font-bold tracking-wide leading-tight whitespace-nowrap px-2"
+            className="font-italianno text-4xl sm:text-3xl md:text-5xl text-amber-900  tracking-wide leading-tight whitespace-nowrap px-2"
           >
-            Sushmitha <span className="font-normal font-sans text-lg sm:text-xl text-amber-700/70 mx-1">&</span> Pandian
+            Sushmitha{" "}
+            <span className="font-normal font-sans text-lg sm:text-xl text-amber-700/70 mx-1">
+              &
+            </span>{" "}
+            Pandian
           </motion.h3>
         </div>
-
       </motion.div>
     </section>
   );
