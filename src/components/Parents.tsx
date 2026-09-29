@@ -1,7 +1,7 @@
 import { motion, type Variants } from "framer-motion";
-import TempleImg from "../assets/Temple.png";
-import ThoranamImg from "../assets/Thoranum.png";
-import CoupleImg from "../assets/Couple.png";
+import TempleImg from "./assets/Temple.webp";
+import ThoranamImg from "./assets/Thoranum.webp";
+import CoupleImg from "./assets/Couple.webp";
 
 export default function Parents() {
   const containerVariants: Variants = {
