@@ -1,7 +1,7 @@
 import { motion, type Variants } from "framer-motion";
 import TempleImg from "../assets/Temple.png";
-// Import your new Thoranam asset from the assets folder
 import ThoranamImg from "../assets/Thoranum.png";
+import CoupleImg from "../assets/Couple.png";
 
 export default function Parents() {
 
@@ -19,13 +19,13 @@ export default function Parents() {
   };
 
   return (
-    <section className="relative w-full min-h-[100dvh] flex flex-col items-center justify-between px-4 sm:px-6 pb-10 pt-4 select-none overflow-hidden bg-gradient-to-b from-amber-50/50 via-white to-amber-50/30 snap-start">
+    <section className="relative w-full h-[100dvh] min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 py-8 select-none overflow-hidden bg-gradient-to-b from-amber-50/50 via-white to-amber-50/30 snap-start">
       {/* 🏛️ Center Temple Gopuram Background Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
         <img
           src={TempleImg}
           alt="Temple Gopuram"
-          className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain opacity-[0.06] transform scale-105"
+          className="w-full max-w-[340px] sm:max-w-[420px] h-auto object-contain opacity-[0.05] transform scale-110"
         />
       </div>
 
@@ -39,23 +39,23 @@ export default function Parents() {
         style={{
           backgroundImage: `url(${ThoranamImg})`,
           backgroundRepeat: "repeat-x",
-          backgroundSize: "auto 100%", // Keeps the aspect ratio height perfect while repeating horizontally
+          backgroundSize: "auto 100%",
           backgroundPosition: "top center",
         }}
       />
 
-      {/* 📜 CENTER ELEMENT: Traditional Content Typography */}
+      {/* 📜 CENTER ELEMENT: Tight, Balanced Content Typography Stack */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}
-        className="w-full max-w-md z-10 text-center flex flex-col items-center justify-center px-2 mt-16 sm:mt-20 mb-auto"
+        className="w-full max-w-md z-10 text-center flex flex-col items-center justify-center px-2 gap-y-5 sm:gap-y-6"
       >
         {/* Top Quote */}
         <motion.p
           variants={itemVariants}
-          className="font-serif italic text-amber-800 text-xs sm:text-[13px] tracking-wide max-w-xs sm:max-w-sm mb-6 sm:mb-10 leading-relaxed"
+          className="font-serif italic text-amber-800 text-xs sm:text-[13px] tracking-wide max-w-xs sm:max-w-sm leading-relaxed mb-1"
         >
           "With the love of our families as our anchor and the blessings of the heavens as our light, our journey begins."
         </motion.p>
@@ -64,7 +64,7 @@ export default function Parents() {
         <div className="w-full flex flex-col items-center">
           <motion.p
             variants={itemVariants}
-            className="font-serif italic text-amber-900/60 text-[10px] sm:text-xs tracking-wider uppercase mb-1"
+            className="font-serif italic text-amber-900/60 text-[10px] sm:text-xs tracking-wider uppercase mb-0.5"
           >
             Beloved Daughter of
           </motion.p>
@@ -78,7 +78,7 @@ export default function Parents() {
 
           <motion.p
             variants={itemVariants}
-            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-1 mb-4 sm:mb-5 font-bold max-w-[280px] sm:max-w-none"
+            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-light max-w-[280px] sm:max-w-none"
           >
             (LIC of India, Sr. Insurance Advisor)
           </motion.p>
@@ -87,7 +87,7 @@ export default function Parents() {
         {/* Divider */}
         <motion.div
           variants={itemVariants}
-          className="w-full flex items-center justify-center gap-4 my-1"
+          className="w-full flex items-center justify-center gap-4 py-0.5"
         >
           <div className="w-8 border-b border-amber-800/15" />
           <span className="font-serif italic text-amber-700/40 text-xs sm:text-sm">
@@ -97,10 +97,10 @@ export default function Parents() {
         </motion.div>
 
         {/* Groom's Side */}
-        <div className="w-full flex flex-col items-center mt-4 sm:mt-5">
+        <div className="w-full flex flex-col items-center">
           <motion.p
             variants={itemVariants}
-            className="font-serif italic text-amber-900/60 text-[10px] sm:text-xs tracking-wider uppercase mb-1"
+            className="font-serif italic text-amber-900/60 text-[10px] sm:text-xs tracking-wider uppercase mb-0.5"
           >
             Cherished Son of
           </motion.p>
@@ -114,11 +114,35 @@ export default function Parents() {
 
           <motion.p
             variants={itemVariants}
-            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-1 font-bold max-w-[280px] sm:max-w-none"
+            className="font-sans text-[10px] sm:text-[11px] md:text-xs text-neutral-400 tracking-wide mt-0.5 font-light max-w-[280px] sm:max-w-none"
           >
             (Sri Meenakshi Bikes, Bajaj Service Manager)
           </motion.p>
         </div>
+
+        {/* 👩‍❤️‍👨 Couple Illustration & Names Section (Now seamlessly grouped) */}
+        <div className="w-full flex flex-col items-center mt-2 gap-y-3">
+          {/* Couple Illustration */}
+          <motion.div
+            variants={itemVariants}
+            className="w-full max-w-[100px] sm:max-w-[120px] aspect-[3/4] flex items-center justify-center"
+          >
+            <img
+              src={CoupleImg}
+              alt="Wedding Couple Cartoon"
+              className="w-full h-auto object-contain drop-shadow-sm"
+            />
+          </motion.div>
+
+          {/* Responsive Couple Names Display */}
+          <motion.h3
+            variants={itemVariants}
+            className="font-serif text-xl sm:text-2xl md:text-3xl text-amber-900 font-bold tracking-wide leading-tight whitespace-nowrap px-2"
+          >
+            Sushmitha <span className="font-normal font-sans text-lg sm:text-xl text-amber-700/70 mx-1">&</span> Pandian
+          </motion.h3>
+        </div>
+
       </motion.div>
     </section>
   );
