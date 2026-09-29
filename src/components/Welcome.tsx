@@ -36,7 +36,7 @@ export default function Welcome({ onOpenInvitation }: WelcomeProps) {
           className="relative w-36 h-36 min-h-[144px] mb-6 drop-shadow-[0_8px_16px_rgba(217,119,6,0.25)]"
         >
           <img
-            src="https://plain-apac-prod-public.komododecks.com/202609/29/smnG6UEmvcERkcOtLZzb/image.png"
+            src="../../public/assets/Vinayakar.webp"
             alt="Lord Vinayagar"
             className="w-full h-full object-contain object-center"
           />
